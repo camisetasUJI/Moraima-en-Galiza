@@ -299,18 +299,22 @@
 
   /* ================= AUTOR ================= */
   .autor{ background:var(--cream); }
-  .autor-grid{ display:grid; grid-template-columns:220px 1fr; gap:56px; max-width:800px; margin:0 auto; align-items:center; }
-  .autor-mark{
-    width:220px; height:220px; border-radius:50%;
-    border:1.5px solid var(--line);
-    display:flex; align-items:center; justify-content:center;
-    font-family:'Permanent Marker', cursive; font-size:56px; color:var(--moss);
-    background:var(--cream-deep);
-  }
-  .autor h2{ font-family:'Permanent Marker', cursive; font-size:32px; margin-bottom:16px;}
-  .autor p{ color:var(--ink-soft); }
-  @media (max-width:640px){ .autor-grid{ grid-template-columns:1fr; text-align:center; } .autor-mark{ margin:0 auto;} }
-
+.autor-grid{ display:grid; grid-template-columns:220px 1fr; gap:56px; max-width:800px; margin:0 auto; align-items:center; }
+.autor-mark{
+  width:220px; height:220px; border-radius:50%;
+  border:1.5px solid var(--line);
+  display:flex; align-items:center; justify-content:center;
+  background:var(--cream-deep);
+  overflow:hidden;
+}
+.autor-mark img{
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+.autor h2{ font-family:'Permanent Marker', cursive; font-size:32px; margin-bottom:16px;}
+.autor p{ color:var(--ink-soft); }
+@media (max-width:640px){ .autor-grid{ grid-template-columns:1fr; text-align:center; } .autor-mark{ margin:0 auto;} }
   /* ================= COMPRAR ================= */
   .comprar{
     background:var(--moss);
@@ -489,7 +493,9 @@
 <!-- ================= AUTOR ================= -->
 <section class="autor">
   <div class="autor-grid">
-    <div class="autor-mark reveal">O.</div>
+    <div class="autor-mark reveal visible">
+  <img src="autor.jpg" alt="Otman, autor de Moraima en Galiza">
+    </div>
     <div class="reveal reveal-delay1">
       <span class="eyebrow">Sobre el autor</span>
       <h2>Otman</h2>
