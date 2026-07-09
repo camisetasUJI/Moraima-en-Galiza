@@ -314,6 +314,22 @@
 }
 .autor h2{ font-family:'Permanent Marker', cursive; font-size:32px; margin-bottom:16px;}
 .autor p{ color:var(--ink-soft); }
+  .autor-redes{
+  display:flex;
+  gap:18px;
+  margin-top:20px;
+}
+.autor-redes a{
+  color:var(--ink-soft);
+  transition:color .2s ease, transform .2s ease;
+}
+.autor-redes a:hover{
+  color:var(--ink);
+  transform:translateY(-2px);
+}
+@media (max-width:640px){
+  .autor-redes{ justify-content:center; }
+}
 @media (max-width:640px){ .autor-grid{ grid-template-columns:1fr; text-align:center; } .autor-mark{ margin:0 auto;} }
   /* ================= COMPRAR ================= */
   .comprar{
@@ -500,6 +516,21 @@
       <span class="eyebrow">Sobre el autor</span>
       <h2>Otman</h2>
       <p>Escribo desde la certeza de que algunos versos persiguen más tiempo del que dura la persona que los inspiró, y esa certeza, lejos de consolarme, me ha perseguido también a mí. No sé todavía si esto es literatura o es confesión, y llevo tiempo prefiriendo no saberlo. <em>Moraima en Galiza</em> es, sencillamente, lo que queda cuando uno se cansa de nombrar en silencio.</p>
+      <div class="autor-redes">
+  <a href="https://instagram.com/the_real_otman1" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+    </svg>
+  </a>
+  <a href="https://tiktok.com/@the_real_otman1" target="_blank" rel="noopener" aria-label="TikTok">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5c.35 0 .68.04 1 .12"/>
+      <path d="M14 4c.3 2 1.8 3.6 4 4"/>
+    </svg>
+  </a>
+</div>
     </div>
   </div>
 </section>
