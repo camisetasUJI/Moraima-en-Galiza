@@ -150,19 +150,29 @@
     margin-top:44px;
     display:flex; gap:16px; flex-wrap:wrap;
   }
- .hero-image{
-    position:relative;
-    height:100svh;
-    display:flex; align-items:center; justify-content:center;
-    padding:6vh 3vw;
-    box-sizing:border-box;
+ .hero-image {
+    position: relative;
+    height: 100svh;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    padding: 6vh 3vw;
+    box-sizing: border-box;
 }
-  .hero-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center 20%;
-  filter: saturate(1.02);
+
+.hero-image img {
+    /* Cambiamos a 'contain' para que la imagen se ajuste completa */
+    object-fit: contain; 
+    
+    /* Aseguramos que no se desborde */
+    max-width: 100%;
+    max-height: 100%;
+    
+    /* Quitamos el 100% fijo para que no se estire forzosamente */
+    width: auto;
+    height: auto;
+    
+    filter: saturate(1.02);
 }
   .hero-image::after{
     content:'';
